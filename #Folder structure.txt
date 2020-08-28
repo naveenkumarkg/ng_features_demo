@@ -1,0 +1,103 @@
+#Folder structure
+
+#e2e
+    - end to end test scripts will be residing 
+    - Protractor framework is used to run the end to end tests
+    - app.po.ts
+        Protractor file which will have a po.ts
+#node_modules
+    -  In this folder dependencies for the project are installed (Libraries/Plugins)
+#src 
+    - Heart of the project
+        - app 
+            - Used for development like creating the [components,directives,pipes,forms,services,routing,modules]
+        -assets 
+            - This for img,logo,styles,
+        -environment
+            - Here we will configure variables or pipelines for dev,test,stage and prod
+
+        -Polyfills- if the user browser is outdated one- polyfills will add ES6 functionality
+
+        -styles.css - You can add global styles to this file, and also import other style files 
+
+        -test.ts - used for booting process
+
+        -main.ts- used for boosting the angular app
+#angular.json
+        - Angular.json is a configuration file for the angular application 
+
+        --------------------------------------------------------------------------------------
+
+#modules
+    - Every Angular will have a default Componenet & a module.
+        #Authentication
+            Sign-In 
+            Sign-Up
+            forgot-password
+            users
+    - modules can have components,services,directives,pipes etc etc 
+    - plug and play feature
+    - it allows to be modular, easy to maintain , easy to debug
+    - You do not need mutliple modules for a single page application 
+    - to main lazy loading modules will be usefull
+    -   declarations: [Components, ], 
+        imports: [Thirs party plugins , in built features], 
+        providers: [Services, to call Api, to perform business logic],
+        bootstrap: [AppComponent]
+
+#Decorators
+    - Typescript features for passing meta data
+    - Decorators will return function
+    - Decorators invoked at runtime
+    - Decorators invoke functions
+    - Types of Decorators
+        Class Decorators - @NgModule, @Componenet
+        Property Decorators - @Input(), @Output()
+        Method Decorators - @HostListener
+        Parameter Decorators - @Inject
+    - Decorators can be indentified by prefixed '@' symbol
+    - Decorators are a way to pass data
+
+#components
+    - Components : collection of HTML,CSS,Spec.ts,ts(typescript)
+    - Index.HTML    
+        <app-root></app-root>
+            <sub-components></sub-components>
+                <sub-sub-componenet></sub-sub-componenet>
+
+#How to create Component
+#How to Configure route
+    ##added the cofiguration in appRoute.module.ts
+    ##routerLink, 
+
+    
+
+#directives
+    #Directives in Angular
+    #importance of Directives
+    #Types of Directives
+        ##There are 3 types of Directives   
+            ###Component Directives
+                Every Angular application must have at least one component
+                have its own template
+                Events attached
+            ###Structural Directives //adding dynamic condition on html
+                Updates structure of the view
+                ngFor,ngIf and ngSwitch
+            ###Attribute Directives // adding dynamic css
+                ngStyle, ngClass
+    #How to generate custom directives
+
+
+
+---------------------------------------------------------------------------------------------------------------
+#CLi commands
+    -ng serve [--port=330 -o]
+    -ng test
+    To Generate 
+        - ng generate component componentName
+        - ng generate module moduleName
+        - ng generate service serviceName
+        
+
+

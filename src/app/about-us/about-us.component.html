@@ -1,0 +1,28 @@
+<section id="main">
+
+  <div class="container-fluid" *ngIf="users != undefined && users != null">
+   
+    <div class="cards">
+      <ng-template ngFor let-user [ngForOf]="users"> <!--if not template *ngGor="let user of users"-->
+        <div class="card">
+          <img src="{{ user.avatar_url }}" class="imgW" alt="" />
+         
+         
+            <h3 >
+              <span matBadge="{{user.followers_url.length}}" matBadgeOverlap="false">{{ user.login }}</span></h3>
+          <div>
+            <button mat-raised-button (click)="userProfile(user)" color="primary">Profile</button>
+          </div>
+        
+        </div>
+      </ng-template>
+
+      <!-- {{ students | json }} -->
+      <!-- {{students[0].name}} -->
+
+      <!-- <div class="card" *ngFor="let object of students">
+        {{ object.name }}
+      </div> -->
+    </div>
+  </div>
+</section>

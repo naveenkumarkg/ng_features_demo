@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {AppRoutingModule} from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import {FormsModule} from '@angular/forms';
+
 
 // Compoenents
 import { AppComponent } from './app.component';
@@ -23,14 +25,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EditComponent } from './edit/edit.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
-  declarations:[AppComponent, HeaderComponent, ShowcaseComponent, NewsletterComponent, CardsComponent, FooterComponent, HomeComponent, AboutComponent, AboutUsComponent, ServicesComponent, UserComponent],
+  declarations:[AppComponent, HeaderComponent, ShowcaseComponent, NewsletterComponent, CardsComponent, FooterComponent, HomeComponent, AboutComponent, AboutUsComponent, ServicesComponent, UserComponent, EditComponent],
   providers:[AboutUsService],
   bootstrap:[AppComponent],
-  imports:[BrowserModule,AppRoutingModule,HttpClientModule, BrowserAnimationsModule,
-    MatSliderModule,MatButtonModule,MatBadgeModule  ]
+  imports:[BrowserModule,AppRoutingModule,HttpClientModule, BrowserAnimationsModule,DragDropModule,MatDialogModule,
+    MatSliderModule,MatButtonModule,MatBadgeModule,MatCardModule,MatInputModule,FormsModule]
 })
 export class AppModule{
 

@@ -3,7 +3,7 @@
   <div class="container-fluid" *ngIf="users != undefined && users != null">
    
     <div class="cards">
-      <ng-template ngFor let-user [ngForOf]="users"> <!--if not template *ngGor="let user of users"-->
+      <ng-template ngFor let-user let-i="index" [ngForOf]="users"> <!--if not template *ngGor="let user of users"-->
         <div class="card">
           <img src="{{ user.avatar_url }}" class="imgW" alt="" />
          
@@ -11,7 +11,7 @@
             <h3 >
               <span matBadge="{{user.followers_url.length}}" matBadgeOverlap="false">{{ user.login }}</span></h3>
           <div>
-            <button mat-raised-button (click)="userProfile(user)" color="primary">Profile</button>
+            <button mat-raised-button (click)="userProfile(user,i)" color="primary">Profile</button>
           </div>
         
         </div>
